@@ -1,0 +1,37 @@
+@import "../../GeneralScss/variables";
+@import "../../GeneralScss/common";
+
+
+.container{
+    margin-top: 50px;
+    padding: 0 50px;
+
+    &__headline{
+        margin-bottom: 30px;
+        @include headline();
+        &__important{
+            padding-inline-start:10px ;
+            @include important();
+        }
+    }
+}
+.link{
+
+    text-decoration: none !important;
+}
+.more{
+    margin-top: 50px;
+    margin-inline-start: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    padding: 10px 20px;
+    color: white;
+    background-color: $primaryLight;
+    font-weight: bolder;
+    
+    img{
+        filter: invert(100%);
+        width: 20px;
+        margin-inline-start: 10px;
+    }
+}

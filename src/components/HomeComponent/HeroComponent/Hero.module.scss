@@ -1,0 +1,56 @@
+@import "../../GeneralScss/variables";
+@import "../../GeneralScss/common";
+
+
+.container{
+    color:white;
+    background-image: url("https://images.squarespace-cdn.com/content/v1/594fd959a5790afdb0a7e849/1519572396617-CCV5PLMUTLU74XKG2SJJ/ke17ZwdGBToddI8pDm48kMCLGa0FeleEm_GkFaWWL4MUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dnUbs6BtCV3TtYCsIJCoFx9jDK2X9coSj-O1zSJcJ8s53WUfc_ZsVm9Mi1E6FasEnQ/hands-group-collaboration.jpg?format=2500w");
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 80vh;
+    
+    &__headline{
+        @include headline();
+        
+        &__important{
+            padding-inline-end:10px ;
+            @include important();
+        }
+    }
+    
+    &__wrapper{
+        padding: 50px;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.822);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__description{
+        width: 75%;
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    &__button{
+        padding:20px 90px;
+        background-color: $primaryDark;
+        border: 0;
+        color: white;
+        font-size: 30px;
+        font-weight: 900;
+        margin-top: 20px;
+        transition: all 0.5s ease;
+
+        &:hover{
+          transform: scale(1.1,1.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.337);
+        }
+    }
+
+
+}
+

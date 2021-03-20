@@ -1,0 +1,11 @@
+@import "../../GeneralScss/variables";
+@import "../../GeneralScss/common";
+
+.container{
+    display: flex;
+    align-items: center;
+    img{
+        margin-inline-end: 10px;
+        width: 30px;
+    }
+}
