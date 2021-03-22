@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CaseCard from '../SharedComponents/CaseCard/CaseCard'
 import FilterComponent from './FilterComponent/FilterComponent'
 import classes from "./Cases.module.scss"
+import i18next from 'i18next';
 
 //API
 const casesEndpoint = "http://localhost:8000/api/case";
@@ -32,7 +33,7 @@ function Cases() {
                     necessities={c.necessities.map(n => n.name_in_english)}
                     title={c.title}
                     description={c.description}
-                    city={c.city}
+                    city={(i18next.language=="en")?c.family.city.name_in_english:c.family.city.name_in_arabic}
                     imageUrl={c.images.filter(i => i.is_main === 1)[0].image_name} />
             })}
         </div>
@@ -44,6 +45,7 @@ function Cases() {
             {renderCases()}
         </div>
     )
+
 }
 
 export default Cases

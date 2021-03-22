@@ -26,6 +26,8 @@ return (
       <Route path="/cases">
         <Cases/>
       </Route>
+
+      
     </Switch>
     <Footer/>
     </Router>

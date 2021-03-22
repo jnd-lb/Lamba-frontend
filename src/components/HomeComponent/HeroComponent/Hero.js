@@ -2,6 +2,7 @@ import React from 'react'
 import cn from "classnames"
 import classes from "./Hero.module.scss"
 import { useTranslation } from 'react-i18next';
+import {Link} from "react-router-dom";
 
 function Hero() {
   const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ function Hero() {
         <p className={classes.container__description}>
         {t('hero.description')}
         </p>
-        <button className={classes.container__button}> {t('hero.button')}</button>
+        <Link to="/cases" className={classes.container__button}> {t('hero.button')}</Link>
         </div>
       </div>
     )

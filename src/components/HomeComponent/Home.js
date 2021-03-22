@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from "./HeroComponent/Hero"
 import HomeCasesList from './HomeCasesList/HomeCasesList'
 import Statistcs from './StatisticsComponent/Statistcs'
+import { withRouter, Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -9,6 +10,8 @@ function Home() {
             <Hero/>
             <Statistcs/>
             <HomeCasesList/>
+
+
         </div>
     )
 }

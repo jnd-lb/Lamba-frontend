@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from "./CaseCard.module.scss";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import NecessityBagde from '../NecessityBagde/NecessityBagde';
 
 function CaseCard(props) {
@@ -9,7 +9,7 @@ function CaseCard(props) {
         backgroundImage: `url(${props.imageUrl})`
     }
     return (
-        <Link to="/cases/" className={classes.link + ` ${props.className}`} to="/">
+        <Link to={{pathname: "/case/"+props.id, state:{fromDashboard:true}}}  className={classes.link + ` ${props.className}`}>
             <div className={classes.container}>
                 <div style={imageUrl} className={classes.container__imgContainer}></div>
                 <div className={classes.container__main}>

@@ -14,3 +14,11 @@
     font-size: 40px;
     font-weight: 400;
 }
+
+//General configuartions
+a{
+    text-decoration: none !important;
+    &:hover{
+        color: white;
+    }
+}
